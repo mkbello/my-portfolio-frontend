@@ -19,27 +19,94 @@ body {
 }
 
 .container {
+  padding-top: 120px;
+  padding-right: 20px;
+  padding-left: 20px;
   max-width: 900px;
   margin: 0 auto;
-  padding: 24px
 }
 
-nav {
+
+.nav-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 16px 0
+  padding: 20px;
+  max-width: 900px;
+  margin: 0 auto;
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  background-color: white;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-nav .brand {
-  font-weight: 700
+.nav-container .brand {
+  font-weight: 700;
+  font-size: 22px;
 }
 
-nav a {
+
+.nav-links a {
   margin-left: 16px;
   text-decoration: none;
-  color: inherit
+  color: inherit;
 }
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger .bar {
+  width: 25px;
+  height: 3px;
+  background-color: black;
+  margin: 4px 0;
+}
+
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 64px;
+
+    right: 24px;
+    background-color: white;
+    padding: 16px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-links a {
+    margin: 8px 0;
+  }
+}
+
+.skills-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 16px;
+}
+
+.skills-list li {
+  margin-bottom: 12px;
+  line-height: 1.6;
+}
+
 
 header.hero {
   background: linear-gradient(90deg, rgba(14, 165, 233, 0.08), transparent);
@@ -60,6 +127,23 @@ p.lead {
 
 section {
   margin-bottom: 28px
+}
+
+#about {
+  padding-top: 70px;
+}
+
+#skills {
+  padding-top: 70px;
+}
+
+#projects {
+  padding-top: 70px;
+}
+
+#contact {
+  padding-top: 70px;
+  padding-bottom: 100px;
 }
 
 .card {
